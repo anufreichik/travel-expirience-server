@@ -4,26 +4,20 @@ import userCheckPerm from '../permission/userCheckPerm';
 import userCheckEmailSendPerm from '../permission/userCheckEmailSendPerm';
 import userRegister from './controllers/userControllerRegister';
 import userLogin from './controllers/userControllerLogin';
-import userPasswordResetRequest
-  from './controllers/resetPassword/userControllerPasswordResetRequest';
-import userPasswordIsValidResetLink
-  from './controllers/resetPassword/userControllerIsValidResetLink';
-import userPasswordResetNew
-  from './controllers/resetPassword/userControllerPasswordResetNew';
-import userPasswordUpdate
-  from './controllers/resetPassword/userControllerPasswordUpdate';
+import userPasswordResetRequest from './controllers/resetPassword/userControllerPasswordResetRequest';
+import userPasswordIsValidResetLink from './controllers/resetPassword/userControllerIsValidResetLink';
+import userPasswordResetNew from './controllers/resetPassword/userControllerPasswordResetNew';
+import userPasswordUpdate from './controllers/resetPassword/userControllerPasswordUpdate';
 import userGetAll from './controllers/userControllerGetAll';
 import userGetById from './controllers/userControllerGetById';
 import userGetAuthUser from './controllers/userControllerGetAuthUser';
 import userDeleteById from './controllers/userControllerDeleteById';
 import userUpdateRoleById from './controllers/userControllerUpdateRoleById';
 import userUpdateSelf from './controllers/userControllerUpdateSelf';
-import userEmailConfirm
-  from './controllers/mailConfirm/userControllerEmailConfirm';
+import userEmailConfirm from './controllers/mailConfirm/userControllerEmailConfirm';
 import userVerifyEmailSend from './controllers/mailConfirm/userVerifyEmailSend';
 import serviceHeader from '../utils/serviceHeader';
-import getResetPasswordHash
-  from './controllers/resetPassword/getResetPasswordHash';
+import getResetPasswordHash from './controllers/resetPassword/getResetPasswordHash';
 import userDeleteByEmail from './controllers/userControllerDeleteByEmail';
 import userGetByEmail from './controllers/userControllerGetByEmail';
 import userSearch from './controllers/userSearch';

@@ -67,7 +67,7 @@ function setUserEmailConfirmed(req, res, userId, currentRoles, email, name, phon
   let updateBody;
 
   const isUserWithRoleNew = currentRoles.length === 1 && currentRoles[0] === 'new';
-  const newRoles = ['businessOwner'];
+  const newRoles = ['verified'];
 
   if (isUserWithRoleNew) {
     // For a user with the role "new", it is necessary to confirm email and update the role

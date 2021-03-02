@@ -1,4 +1,4 @@
-export const listRoles = ['new', 'businessOwner', 'impersonate'];
+export const listRoles = ['new', 'verified', 'impersonate'];
 
 const base = [
   'base.create.own',
@@ -8,18 +8,32 @@ const base = [
   'base.delete.own',
 ];
 
+const client = [
+  'client.create.own',
+  'client.get.own',
+  'client.search.own',
+  'client.update.own',
+  'client.delete.own',
+];
+
+const userAdmin = [
+  'user.auth',
+  'user.get.all',
+  'user.delete.any',
+  'user.update.any',
+  'user.search',
+  'user.impersonate',
+  'user.stats',
+];
+
 const roles = {
-  new: ['user.auth', ...base],
+  new: ['user.auth'],
+
+  verified: ['user.auth', ...base, ...client],
 
   admin: [
     // USER
-    'user.auth',
-    'user.get.all',
-    'user.delete.any',
-    'user.update.any',
-    'user.search',
-    'user.impersonate',
-    'user.stats',
+    ...userAdmin,
 
     // EXAMPLE
     ...base,
