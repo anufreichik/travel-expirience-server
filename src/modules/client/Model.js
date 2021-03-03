@@ -9,7 +9,17 @@ const Schema = mongoose.Schema(
       required: true,
     },
 
-    description: {
+    phone: {
+      type: String,
+      required: false,
+    },
+
+    email: {
+      type: String,
+      required: false,
+    },
+
+    notes: {
       type: String,
       required: false,
     },

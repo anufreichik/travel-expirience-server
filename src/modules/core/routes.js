@@ -10,9 +10,9 @@ import clientRouter from '../client/Routes';
 import listRouter from '../lists/Routes';
 
 export default function routes(app) {
+  app.use('/user', userRouter);
   app.use('/base', baseRouter);
   app.use('/client', clientRouter);
-  app.use('/user', userRouter);
   app.use('/fake', fakeRouter);
   app.use('/analytics', analyticsRouter);
 

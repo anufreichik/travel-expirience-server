@@ -11,13 +11,13 @@ import chai from 'chai';
 chai.use(require('chai-datetime'));
 import * as Sentry from '@sentry/node';
 
-const PORT = +process.env.PORT || 6000;
+const PORT = +process.env.PORT || 5000;
 const app = express();
 
 Sentry.init({ dsn: process.env.SENTRY });
 
 // The request handler must be the first middleware on the app
-app.use(Sentry.Handlers.requestHandler());
+// app.use(Sentry.Handlers.requestHandler());
 
 app.disable('x-powered-by'); // DISABLE EXPRESS SIGNATURE
 mongoConnection();
@@ -27,7 +27,7 @@ cors(app);
 ignoreFavicon(app);
 pause(app);
 routes(app);
-app.use(Sentry.Handlers.errorHandler());
+// app.use(Sentry.Handlers.errorHandler());
 errorHandling(app);
 
 // The error handler must be before any other error middleware and after all controllers

@@ -14,12 +14,16 @@ export default async function clientCreate(req, res) {
 
   // Читаем данные из запроса
   const name = get(req, 'body.name');
-  const description = get(req, 'body.description');
+  const phone = get(req, 'body.phone');
+  const email = get(req, 'body.email');
+  const notes = get(req, 'body.notes');
 
   const createClientQueryResult = await createClientQuery({
     _id,
     name,
-    description,
+    phone,
+    email,
+    notes,
     owner: userId,
   });
 

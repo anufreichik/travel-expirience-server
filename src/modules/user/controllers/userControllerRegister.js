@@ -9,6 +9,8 @@ import { checkPassword } from './utils';
 
 const userRegister = async (req, res) => {
 
+  console.log('REG')
+
   const firstName = get(req, 'body.firstName', '').trim();
   const lastName = get(req, 'body.lastName', '').trim();
   const email = get(req, 'body.email', '').trim().toLowerCase();
