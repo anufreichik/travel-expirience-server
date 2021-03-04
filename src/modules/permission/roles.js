@@ -24,6 +24,22 @@ const order = [
   'order.delete.own',
 ];
 
+const vendor = [
+  'vendor.create.own',
+  'vendor.get.own',
+  'vendor.search.own',
+  'vendor.update.own',
+  'vendor.delete.own',
+];
+
+const service = [
+  'service.create.own',
+  'service.get.own',
+  'service.search.own',
+  'service.update.own',
+  'service.delete.own',
+];
+
 const userAdmin = [
   'user.auth',
   'user.get.all',
@@ -37,7 +53,7 @@ const userAdmin = [
 const roles = {
   new: ['user.auth'],
 
-  verified: ['user.auth', ...base, ...client, ...order],
+  verified: ['user.auth', ...base, ...client, ...order, ...vendor, ...service],
 
   admin: [
     // USER

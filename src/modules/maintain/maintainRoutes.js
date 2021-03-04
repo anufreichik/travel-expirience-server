@@ -1,17 +1,17 @@
 import { Router } from 'express';
-import { service } from './serviceControllers';
+import { maintain } from './maintainControllers';
 import userCheckAuth from '../user/middlewares/userCheckAuth';
 import userCheckPerm from '../permission/userCheckPerm';
-import serviceHeader from '../utils/serviceHeader';
+import maintainHeader from '../utils/serviceHeader';
 
 const router = Router();
 
 router.get(
   '/',
-  serviceHeader('service'),
+  maintainHeader('maintain'),
   userCheckAuth,
   userCheckPerm('user.update.any'),
-  service,
+  maintain,
 );
 
 export default router;
