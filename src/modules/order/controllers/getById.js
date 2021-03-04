@@ -1,16 +1,16 @@
-import Client from '../Model';
+import Order from '../Model';
 import message from '../../utils/messages';
 import analytics from '../../analytics/controllers/analytics';
 import { get } from 'lodash';
 
-const clientGetById = (req, res) => {
-  const clientId = get(req, 'params.clientId');
+const orderGetById = (req, res) => {
+  const orderId = get(req, 'params.orderId');
   const userId = get(req, 'userData.userId');
 
-  Client.findById(clientId)
+  Order.findById(orderId)
     // подтягивает данные из соседних коллекций, аналог SQL JOIN
     .populate({
-      path: 'order',
+      path: 'client',
       select: 'name',
     })
     // .populate({
@@ -21,22 +21,22 @@ const clientGetById = (req, res) => {
     .exec()
     .then((doc) => {
       if (doc) {
-        res.status(200).json(message.success('Get Client by id ok', doc));
+        res.status(200).json(message.success('Get Order by id ok', doc));
       } else {
-        res.status(404).json(message.fail('No client for provided id'));
+        res.status(404).json(message.fail('No order for provided id'));
       }
     })
     .catch((error) => {
-      const analyticsId = analytics('CLIENT_GET_BY_ID_ERROR', {
+      const analyticsId = analytics('ORDER_GET_BY_ID_ERROR', {
         error,
         body: req.body,
-        entity: 'Client',
+        entity: 'Order',
         user: userId,
-        controller: 'clientGetById',
+        controller: 'orderGetById',
       });
 
-      res.status(400).json(message.fail('Client get error', analyticsId));
+      res.status(400).json(message.fail('Order get error', analyticsId));
     });
 };
 
-export default clientGetById;
+export default orderGetById;

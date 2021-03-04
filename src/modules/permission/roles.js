@@ -16,6 +16,14 @@ const client = [
   'client.delete.own',
 ];
 
+const order = [
+  'order.create.own',
+  'order.get.own',
+  'order.search.own',
+  'order.update.own',
+  'order.delete.own',
+];
+
 const userAdmin = [
   'user.auth',
   'user.get.all',
@@ -29,7 +37,7 @@ const userAdmin = [
 const roles = {
   new: ['user.auth'],
 
-  verified: ['user.auth', ...base, ...client],
+  verified: ['user.auth', ...base, ...client, ...order],
 
   admin: [
     // USER

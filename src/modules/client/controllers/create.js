@@ -24,6 +24,7 @@ export default async function clientCreate(req, res) {
     phone,
     email,
     notes,
+    order: [],
     owner: userId,
   });
 

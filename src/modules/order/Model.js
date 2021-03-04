@@ -9,14 +9,34 @@ const Schema = mongoose.Schema(
       required: true,
     },
 
-    phone: {
-      type: String,
-      required: false,
+    clientPrice: {
+      type: Number,
+      required: true,
     },
 
-    email: {
-      type: String,
-      required: false,
+    clientPaid: {
+      type: Number,
+      required: true,
+    },
+
+    clientDebt: {
+      type: Number,
+      required: true,
+    },
+
+    vendorPrice: {
+      type: Number,
+      required: true,
+    },
+
+    vendorPaid: {
+      type: Number,
+      required: true,
+    },
+
+    vendorDebt: {
+      type: Number,
+      required: true,
     },
 
     notes: {
@@ -24,12 +44,11 @@ const Schema = mongoose.Schema(
       required: false,
     },
 
-    order: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Order',
-      },
-    ],
+    client: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Client',
+      required: true,
+    },
 
     owner: {
       type: mongoose.Schema.Types.ObjectId,
@@ -48,4 +67,4 @@ const Schema = mongoose.Schema(
   { timestamps: {}, versionKey: false },
 );
 
-export default mongoose.model('Client', Schema);
+export default mongoose.model('Order', Schema);
