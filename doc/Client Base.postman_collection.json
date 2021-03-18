@@ -1,0 +1,1385 @@
+{
+	"info": {
+		"_postman_id": "56d0a907-ee29-4735-b821-36d3afc49f37",
+		"name": "Client Base",
+		"description": "For repo https://github.com/bogutski/pasv-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "_BASE",
+			"item": [
+				{
+					"name": "Create Base",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/base",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Base Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/base/603ec95318b2570236585943",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base",
+								"603ec95318b2570236585943"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Base Copy 2",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/base/603ec95318b2570236585943",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base",
+								"603ec95318b2570236585943"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id Base",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/base/5f5cf545414c9413e9aa1a88",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base",
+								"5f5cf545414c9413e9aa1a88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id Base Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/base/stats",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Base Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"e 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/base/search",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENT",
+			"item": [
+				{
+					"name": "Create Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Client A\",\n    \"phone\": \"1232123212\",\n    \"email\": \"qwe@qwe.ewq\",\n    \"notes\": \"Some notes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/client/603ec95318b2570236585943",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"603ec95318b2570236585943"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/base/603ec95318b2570236585943",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"base",
+								"603ec95318b2570236585943"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id Client",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/client/6040422a5f2495145a6fba61",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"6040422a5f2495145a6fba61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stats Client",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/client/stats",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Client Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"e 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/search",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ORDER",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Order 7 for Client A\",\n    \"client\": \"6040422a5f2495145a6fba61\",\n    \"clientPrice\": 800,\n    \"clientPaid\": 200,\n    \"vendorPrice\": 300,\n    \"vendorPaid\": 200\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/order/60404c109f7e0d15f709e61f",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"60404c109f7e0d15f709e61f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Order 7- for Client A\",\n    \"client\": \"6040422a5f2495145a6fba61\",\n    \"clientPrice\": 800,\n    \"clientPaid\": 40,\n    \"vendorPrice\": 300,\n    \"vendorPaid\": 20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order/60404e24ebbb25166becfa06",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"60404e24ebbb25166becfa06"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/order/604044e589ffbd14be9c62a6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"604044e589ffbd14be9c62a6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stats Order",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/order/stats",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/order/search",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"order",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "ANALYTICS",
+			"item": [
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/analytics/5d6702973a89b4ba9ee4b3b2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"analytics",
+								"5d6702973a89b4ba9ee4b3b2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INFO",
+			"item": [
+				{
+					"name": "Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/info",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "SERVICE",
+			"item": [
+				{
+					"name": "Service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/service",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"service"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "MAIL",
+			"item": [
+				{
+					"name": "Mail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/mail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mail"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "RESET PASSWORD",
+					"item": [
+						{
+							"name": "User Reset pass request",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"info@siteograf.com\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/user/password/reset/request",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"password",
+										"reset",
+										"request"
+									]
+								},
+								"description": "Create User"
+							},
+							"response": []
+						},
+						{
+							"name": "User Reset is valid link",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"5baf1fcfc4050f68d8b1f039\",\n  \"hash\": \"5c0c57c8680cef5570ad6687-\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/user/password/reset/valid",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"password",
+										"reset",
+										"valid"
+									]
+								},
+								"description": "Create User"
+							},
+							"response": []
+						},
+						{
+							"name": "User Reset password new",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"5baf1fcfc4050f68d8b1f039\",\n  \"hash\": \"5c0c57c8680cef5570ad6687\",\n  \"password\": \"123123\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/user/password/reset/new",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"password",
+										"reset",
+										"new"
+									]
+								},
+								"description": "Create User"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EMAIL CONFIRM",
+					"item": [
+						{
+							"name": "Email confirm",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/user/verify/email/5c5251611ba2d02122fac689/5c5251611ba2d02122fac68a",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"verify",
+										"email",
+										"5c5251611ba2d02122fac689",
+										"5c5251611ba2d02122fac68a"
+									]
+								},
+								"description": "Create User"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UPDATE",
+					"item": [
+						{
+							"name": "User Update self",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"5901867@gmail.com\",\n    \"name\": \"Viktor Bogutsss\",\n    \"phone\": \"+17075901862\",\n    \"links\": {\n        \"linkedIn\": \"https://www.linkedin.com/in/bogutskii2\",\n        \"resume\": \"https://docs.google.com/document/d/1KkEO4vyCnR5VNf9y4A5CvQhwMuU5J_JrF0xRdl9F3r2/edit\",\n        \"github\": \"https://github.com/bogutski2\",\n        \"facebook\": \"https://www.facebook.com/bogutskiii2\",\n        \"codewarsUsername\": \"Viktor Bogutskii2\"\n    },\n    \"about\": \"JS developer2\",\n    \"goals\": \"1. Create an effective team of teachers to create the best course for training engineers.2\",\n    \"englishLevel\": \"Intermediate2\",\n    \"roles.0\": \"root2\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user"
+									]
+								},
+								"description": "Create User"
+							},
+							"response": []
+						},
+						{
+							"name": "User Update",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"5901867@gmail.com\",\n    \"name\": \"Viktor Bogutskiiiqqqaaaaa\",\n    \"phone\": \"+17075901869\",\n    \"links\": {\n        \"linkedIn\": \"https://www.linkedin.com/in/bogutskii\",\n        \"resume\": \"https://docs.google.com/document/d/1KkEO4vyCnR5VNf9y4A5CvQhwMuU5J_JrF0xRdl9F3r4/edit\",\n        \"github\": \"https://github.com/bogutski\",\n        \"facebook\": \"https://www.facebook.com/bogutskiii\",\n        \"codewarsUsername\": \"Viktor Bogutskii\"\n    },\n    \"about\": \"JS developer\",\n    \"goals\": \"1. Create an effective team of teachers to create the best course for training engineers.\",\n    \"englishLevel\": \"Intermediate\",\n    \"roles\": [\"admin\", \"hello3\"]\n}"
+								},
+								"url": {
+									"raw": "{{host}}/user/5b7366b42ffb85d6053b8649",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"5b7366b42ffb85d6053b8649"
+									]
+								},
+								"description": "Create User"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\",\n    \"firstName\": \"Viktor\",\n    \"lastName\": \"Bogutskii\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json();",
+									"pm.environment.set(\"token\", data.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"{{email}}\",\n  \"password\": \"{{password}}\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/user/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/5d65ec11b1878f003877aae4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"5d65ec11b1878f003877aae4"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/hash/5d65ec11b1878f003877aae4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"hash",
+								"5d65ec11b1878f003877aae4"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Fulfilled All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/fulfilled/all",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"fulfilled",
+								"all"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Auth",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": " {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/auth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"auth"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "All Users Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/roles",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"roles"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "User Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Vikt\",\n\t\"group\": \"5db7df2d8d9651003810ba90\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/search",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"search"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/lightweight",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"lightweight"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/user/5b7391e55ec8d7003a0f86e0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"5b7391e55ec8d7003a0f86e0"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by Id Email",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/user/5b7391e55ec8d7003a0f86e0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"5b7391e55ec8d7003a0f86e0"
+							]
+						},
+						"description": "Create User"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hash",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/user/hash/5d55d01ff58ca3906275094b",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"hash",
+								"5d55d01ff58ca3906275094b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
