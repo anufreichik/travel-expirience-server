@@ -13,7 +13,8 @@ const userLogin = (req, res) => {
   const email = get(req, 'body.email', '').trim().toLowerCase();
 
   User.findOne({ email: email })
-    .select('+password')
+    // +emailConfirmation.hash JUST FOR TESTING remove in real project
+    .select('+password +emailConfirmation.hash')
     .exec()
     .then((user) => {
       if (user) {
@@ -53,8 +54,14 @@ const userLogin = (req, res) => {
               user: user._id,
             });
 
+            // Just for education
+            const confirmationHash = get(user, 'emailConfirmation.hash');
+            const confirmEmailLink = `/user/verify/email/${user._id}/${confirmationHash}`;
+            delete user._doc.emailConfirmation.hash;
+
             return res.status(200).json({
               message: 'Auth success',
+              confirmEmailLink,
               token,
               user: user,
               acl: acl(user.roles),
