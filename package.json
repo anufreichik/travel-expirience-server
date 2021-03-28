@@ -4,10 +4,6 @@
   "private": true,
   "description": "ClientBase server",
   "main": "index.js",
-  "engines": {
-    "node": "12.11.1",
-    "npm": "6.11.3"
-  },
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build": "babel src -d build",
