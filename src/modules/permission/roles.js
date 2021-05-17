@@ -1,4 +1,4 @@
-export const listRoles = ['new', 'verified', 'impersonate'];
+export const listRoles = ['new', 'verified', 'impersonate', 'unauthorized'];
 
 const base = [
   'base.create.own',
@@ -6,6 +6,45 @@ const base = [
   'base.search.own',
   'base.update.own',
   'base.delete.own',
+];
+
+const experience = [
+  'experience.create.own',
+  'experience.get.own',
+  'experience.search.own',
+  'experience.update.own',
+  'experience.delete.own',
+];
+
+const activity = [
+  'activity.create.own',
+  'activity.get.own',
+  'activity.search.own',
+  'activity.update.own',
+  'activity.delete.own',
+];
+const accommodation = [
+  'accommodation.create.own',
+  'accommodation.get.own',
+  'accommodation.search.own',
+  'accommodation.update.own',
+  'accommodation.delete.own',
+];
+
+const attraction = [
+  'attraction.create.own',
+  'attraction.get.own',
+  'attraction.search.own',
+  'attraction.update.own',
+  'attraction.delete.own',
+];
+
+const restaurant = [
+  'restaurant.create.own',
+  'restaurant.get.own',
+  'restaurant.search.own',
+  'restaurant.update.own',
+  'restaurant.delete.own',
 ];
 
 const client = [
@@ -24,14 +63,6 @@ const order = [
   'order.delete.own',
 ];
 
-const vendor = [
-  'vendor.create.own',
-  'vendor.get.own',
-  'vendor.search.own',
-  'vendor.update.own',
-  'vendor.delete.own',
-];
-
 const service = [
   'service.create.own',
   'service.get.own',
@@ -40,27 +71,53 @@ const service = [
   'service.delete.own',
 ];
 
-const userAdmin = [
-  'user.auth',
-  'user.get.all',
-  'user.delete.any',
-  'user.update.any',
-  'user.search',
-  'user.impersonate',
-  'user.stats',
-];
-
 const roles = {
-  new: ['user.auth'],
-
-  verified: ['user.auth', ...base, ...client, ...order, ...vendor, ...service],
-
-  admin: [
-    // USER
-    ...userAdmin,
-
-    // EXAMPLE
+  new: [
+    'user.auth',
+    'experience.get.own',
+    'experience.search.own',
+    'restaurant.get.own',
+    'restaurant.search.own',
+    'attraction.get.own',
+    'attraction.search.own',
+    'experience.get.own',
+    'experience.search.own',
+    'restaurant.get.own',
+    'restaurant.search.own',
+    'attraction.get.own',
+    'attraction.search.own',
+    'accommodation.get.own',
+    'accommodation.search.own',
+    'activity.get.own',
+    'activity.search.own',
+    'restaurant.get.own',
+    'restaurant.search.own',
+  ],
+  unauthorized: [
+    'experience.get.own',
+    'experience.search.own',
+    'restaurant.get.own',
+    'restaurant.search.own',
+    'attraction.get.own',
+    'attraction.search.own',
+    'accommodation.get.own',
+    'accommodation.search.own',
+    'activity.get.own',
+    'activity.search.own',
+    'restaurant.get.own',
+    'restaurant.search.own',
+  ],
+  verified: [
+    'user.auth',
     ...base,
+    ...client,
+    ...order,
+    ...service,
+    ...experience,
+    ...accommodation,
+    ...attraction,
+    ...activity,
+    ...restaurant,
   ],
 
   // impersonate: [

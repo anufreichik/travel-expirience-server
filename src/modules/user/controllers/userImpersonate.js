@@ -18,7 +18,6 @@ const userImpersonate = (req, res) => {
           {
             email: user.email,
             userId: user._id,
-            codewarsId: user.codewarsId,
           },
           process.env.JWT_KEY,
           {
